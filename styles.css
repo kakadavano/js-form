@@ -39,6 +39,7 @@ header {
 
 #my-form label {
   display: block;
+  font-size: small;
 }
 
 #my-form input[type='text'] {
@@ -81,4 +82,14 @@ header {
   color: #fff;
   padding: 5px;
   margin: 5px;
+}
+
+form h1 {
+  font-size: larger;
+}
+
+@media (max-width: 480px) {
+  .container {
+  width: 350px;
+  }
 }

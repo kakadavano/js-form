@@ -1,9 +1,9 @@
-const container = document.querySelector(".container");
 const form = document.querySelector("#my-form");
 const msg = document.querySelector(".msg");
 const nameInput = document.querySelector("#name");
 const email = document.querySelector("#email");
 const btn = document.querySelector(".btn");
+const ul = document.querySelector("ul");
 
 form.addEventListener("submit", onSubmit);
 
@@ -20,5 +20,9 @@ function onSubmit(e) {
         msg.innerHTML = "Success";
 
         setTimeout (() => msg.remove(), 3000);
+
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(`${nameInput.value}: ${email.value}`));
+        ul.appendChild(li);
     }
 }
